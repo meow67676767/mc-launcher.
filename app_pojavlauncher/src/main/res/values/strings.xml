@@ -521,4 +521,13 @@
     <string name="auth_microsoft_optional_button">Microsoft account (optional)</string>
     <string name="menu_github" translatable="false">GitHub</string>
     <string name="menu_updates">Updates</string>
+    <string name="update_checking">Checking for updates…</string>
+    <string name="update_none">You have the latest version</string>
+    <string name="update_failed">Could not check or download the update</string>
+    <string name="update_available_title">Update %1$s available</string>
+    <string name="update_available_message">Installed: %1$s\nNew: %2$s\n\n%3$s</string>
+    <string name="update_install">Download and install</string>
+    <string name="update_later">Later</string>
+    <string name="update_downloading">Downloading update</string>
+    <string name="update_allow_unknown_sources">Allow installing apps from this source, then return to the launcher</string>
 </resources>

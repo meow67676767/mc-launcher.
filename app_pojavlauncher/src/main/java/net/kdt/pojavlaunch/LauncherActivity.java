@@ -304,6 +304,7 @@ public class LauncherActivity extends BaseActivity {
 
 
         IconCacheJanitor.runJanitor();
+        net.kdt.pojavlaunch.utils.UpdateChecker.check(this, false);
         mRequestNotificationPermissionLauncher = registerForActivityResult(
                 new ActivityResultContracts.RequestPermission(),
                 isAllowed -> {
@@ -354,6 +355,7 @@ public class LauncherActivity extends BaseActivity {
         super.onResume();
         ContextExecutor.setActivity(this);
         mInstallTracker.attach();
+        net.kdt.pojavlaunch.utils.UpdateChecker.resumePendingInstall(this);
     }
 
     @Override

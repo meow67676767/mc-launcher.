@@ -2,6 +2,13 @@ plugins {
     id 'com.android.application' version '9.3.1'
 }
 
+// PocketCraft Java version. Raise it before each release; the in-app updater compares it with GitHub release tags (vX.Y.Z).
+def pocketcraftVersion = "0.2.0"
+def pocketcraftVersionCode = {
+    def p = pocketcraftVersion.tokenize('.').collect { it as int }
+    return p[0] * 10000 + p[1] * 100 + p[2]
+}
+
 static def getDate() { return new Date().format('yyyyMMdd') }
 
 def getVersionName = {
@@ -103,8 +110,8 @@ android {
         applicationId "io.github.meow67676767.mclauncher"
         minSdkVersion 21
         targetSdkVersion 34
-        versionCode 10000000
-        versionName getVersionName()
+        versionCode 10000000 + pocketcraftVersionCode()
+        versionName pocketcraftVersion
         multiDexEnabled true //important
         resValue 'string', 'curseforge_api_key', getCFApiKey()
         externalNativeBuild {
@@ -252,6 +259,8 @@ dependencies {
     implementation "net.java.dev.jna:jna:5.14.0@aar"
 
     implementation project(":androidnsbypass")
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.json:json:20240303'
 
 }
 apply from: rootProject.file('gradle/prefab_bypass.gradle')

@@ -422,4 +422,13 @@
     <string name="auth_offline_button">Офлайн-аккаунт (ник)</string>
     <string name="auth_microsoft_optional_button">Аккаунт Microsoft (по желанию)</string>
     <string name="menu_updates">Обновления</string>
+    <string name="update_checking">Проверка обновлений…</string>
+    <string name="update_none">У вас последняя версия</string>
+    <string name="update_failed">Не удалось проверить или скачать обновление</string>
+    <string name="update_available_title">Доступно обновление %1$s</string>
+    <string name="update_available_message">Установлено: %1$s\nНовая: %2$s\n\n%3$s</string>
+    <string name="update_install">Скачать и установить</string>
+    <string name="update_later">Позже</string>
+    <string name="update_downloading">Скачивание обновления</string>
+    <string name="update_allow_unknown_sources">Разрешите установку из этого источника и вернитесь в лаунчер</string>
 </resources>
