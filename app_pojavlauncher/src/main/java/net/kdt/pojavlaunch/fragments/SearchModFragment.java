@@ -16,7 +16,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.math.MathUtils;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import net.kdt.pojavlaunch.R;
@@ -80,7 +80,15 @@ public class SearchModFragment extends Fragment implements ModItemAdapter.Search
 
         mDefaultTextColor = mStatusTextView.getTextColors();
 
-        mRecyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
+        GridLayoutManager layoutManager = new GridLayoutManager(getContext(), getResources().getInteger(R.integer.mod_search_columns));
+        layoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+            @Override
+            public int getSpanSize(int position) {
+                // The progress indicator at the end of the list takes the whole row
+                return mModItemAdapter.isLoadingItem(position) ? layoutManager.getSpanCount() : 1;
+            }
+        });
+        mRecyclerview.setLayoutManager(layoutManager);
         mRecyclerview.setAdapter(mModItemAdapter);
 
         mRecyclerview.addOnScrollListener(mOverlayPositionListener);
@@ -122,7 +130,7 @@ public class SearchModFragment extends Fragment implements ModItemAdapter.Search
         mStatusTextView.setVisibility(View.VISIBLE);
         switch (error) {
             case ERROR_INTERNAL:
-                mStatusTextView.setTextColor(Color.RED);
+                mStatusTextView.setTextColor(getResources().getColor(R.color.error));
                 mStatusTextView.setText(R.string.search_modpack_error);
                 break;
             case ERROR_NO_RESULTS:

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- App backdrop: dark base with violet, indigo and orange glows -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/glass_bg_base" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:centerX="0.12"
+                android:centerY="0"
+                android:gradientRadius="120%"
+                android:startColor="@color/glass_bg_violet"
+                android:endColor="@color/glass_bg_violet_clear" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:centerX="0.7"
+                android:centerY="0.1"
+                android:gradientRadius="90%"
+                android:startColor="@color/glass_bg_indigo"
+                android:endColor="@color/glass_bg_indigo_clear" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:centerX="1"
+                android:centerY="1"
+                android:gradientRadius="100%"
+                android:startColor="@color/glass_bg_orange"
+                android:endColor="@color/glass_bg_orange_clear" />
+        </shape>
+    </item>
+</layer-list>

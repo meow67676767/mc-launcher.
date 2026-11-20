@@ -1,6 +1,7 @@
 package net.kdt.pojavlaunch.modloaders.modpacks;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.view.LayoutInflater;
@@ -13,12 +14,14 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.drawable.RoundedBitmapDrawable;
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.kdt.SimpleArrayAdapter;
+import com.kdt.mcgui.GlassStyle;
 
 import net.kdt.pojavlaunch.PojavApplication;
 import net.kdt.pojavlaunch.R;
@@ -43,6 +46,8 @@ public class ModItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     private static final ModItem[] MOD_ITEMS_EMPTY = new ModItem[0];
     private static final int VIEW_TYPE_MOD_ITEM = 0;
     private static final int VIEW_TYPE_LOADING = 1;
+    private static final int[] CARD_TINTS = {R.color.accent_mods, R.color.accent_profiles,
+            R.color.accent_controls, R.color.accent_tools, R.color.loader_fabric, R.color.loader_neoforge};
 
     /* Used when versions haven't loaded yet, default text to reduce layout shifting */
     private final SimpleArrayAdapter<String> mLoadingAdapter = new SimpleArrayAdapter<>(Collections.singletonList("Loading"));
@@ -124,6 +129,11 @@ public class ModItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         if(mTaskInProgress != null) return;
         mTaskInProgress = new SelfReferencingFuture(new SearchApiTask(mSearchFilters, mCurrentResult))
                 .startOnExecutor(PojavApplication.sExecutorService);
+    }
+
+    /** Whether the item at this position is the progress indicator at the end of the list */
+    public boolean isLoadingItem(int position) {
+        return getItemViewType(position) == VIEW_TYPE_LOADING;
     }
 
     @Override
@@ -259,6 +269,7 @@ public class ModItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             mIconCache.getImage(mImageReceiver, mModItem.getIconCacheTag(), mModItem.imageUrl);
             mSourceView.setImageResource(getSourceDrawable(item.apiSource));
             mTitle.setText(item.title);
+            itemView.setBackground(GlassStyle.card(itemView.getContext(), pickCardTint(itemView.getContext(), item.title), false));
             mDescription.setText(item.description);
 
             if(hasExtended()){
@@ -286,10 +297,8 @@ public class ModItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             mExtendedLayout.setVisibility(View.VISIBLE);
             mDescription.setMaxLines(99);
 
-            // We need to align to the longer section
-            int futureBottom = mDescription.getBottom() + Tools.mesureTextviewHeight(mDescription) - mDescription.getHeight();
             ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) mExtendedLayout.getLayoutParams();
-            params.topToBottom = futureBottom > mIconView.getBottom() ? R.id.mod_body_textview : R.id.mod_thumbnail_imageview;
+            params.topToBottom = R.id.mod_body_textview;
             mExtendedLayout.setLayoutParams(params);
         }
 
@@ -333,6 +342,12 @@ public class ModItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             if(mExtendedButton != null)
                 mExtendedButton.setEnabled(mInstallEnabled && !mTasksRunning);
         }
+    }
+
+    /** Pick a stable tint for a card out of the accent palette, based on the title */
+    private static int pickCardTint(Context context, String title) {
+        int hash = title == null ? 0 : title.hashCode();
+        return ContextCompat.getColor(context, CARD_TINTS[(hash & 0x7fffffff) % CARD_TINTS.length]);
     }
 
     /**

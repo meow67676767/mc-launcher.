@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="@dimen/glass_radius_button" />
+    <gradient
+        android:angle="180"
+        android:startColor="@color/glass_banner_start"
+        android:endColor="@color/glass_fill_faint" />
+    <stroke
+        android:width="@dimen/glass_stroke_width"
+        android:color="@color/glass_stroke" />
+</shape>

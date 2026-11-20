@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-
+    android:paddingHorizontal="12dp">
 
     <TextView
         android:id="@+id/mod_extended_error_textview"
+        style="@style/Glass.Muted"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="@string/search_modpack_download_error"
-        android:textColor="#FFFF0000"
+        android:textColor="@color/error"
         android:visibility="gone"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -19,22 +20,28 @@
         android:id="@+id/mod_extended_version_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="@dimen/_30sdp"
-        android:layout_marginVertical="@dimen/padding_moderate"
-        app:layout_constraintTop_toBottomOf="@+id/mod_extended_error_textview"
-        />
+        android:layout_marginTop="8dp"
+        android:background="@drawable/glass_row"
+        android:minHeight="@dimen/glass_row_height"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="8dp"
+        android:popupBackground="@drawable/glass_popup"
+        app:layout_constraintTop_toBottomOf="@+id/mod_extended_error_textview" />
 
     <com.kdt.mcgui.MineButton
         android:id="@+id/mod_extended_select_version_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="@dimen/glass_row_height"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingVertical="10dp"
+        android:layout_marginTop="8dp"
         android:enabled="false"
         android:text="@string/generic_install"
-        android:layout_marginHorizontal="@dimen/padding_large"
-        android:layout_marginTop="@dimen/padding_moderate"
-        android:layout_marginBottom="@dimen/padding_large"
-
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:cta="true"
         app:layout_constraintTop_toBottomOf="@id/mod_extended_version_spinner" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

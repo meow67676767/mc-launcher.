@@ -3,7 +3,7 @@ plugins {
 }
 
 // PocketCraft Java version. Raise it before each release; the in-app updater compares it with GitHub release tags (vX.Y.Z).
-def pocketcraftVersion = "0.2.0"
+def pocketcraftVersion = "0.3.0"
 def pocketcraftVersionCode = {
     def p = pocketcraftVersion.tokenize('.').collect { it as int }
     return p[0] * 10000 + p[1] * 100 + p[2]

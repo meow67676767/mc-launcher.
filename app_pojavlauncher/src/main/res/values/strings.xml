@@ -530,4 +530,42 @@
     <string name="update_later">Later</string>
     <string name="update_downloading">Downloading update</string>
     <string name="update_allow_unknown_sources">Allow installing apps from this source, then return to the launcher</string>
+
+    <!-- Glass and gradient interface -->
+    <string name="main_selected_profile">Selected profile</string>
+    <string name="main_change_profile">Change</string>
+    <string name="main_edit_profile">Edit profile</string>
+    <string name="tile_mods">Mods</string>
+    <string name="tile_mods_hint">Modpacks</string>
+    <string name="tile_profiles">Profiles</string>
+    <string name="tile_profiles_hint">Versions, loaders</string>
+    <string name="tile_controls">Controls</string>
+    <string name="tile_controls_hint">Touch buttons</string>
+    <string name="row_settings">Settings</string>
+    <string name="row_logs">Logs</string>
+    <string name="row_game_folder">Game folder</string>
+    <string name="update_banner_action">Update</string>
+    <string name="update_banner_dismiss">Dismiss</string>
+    <string name="settings_button_description">Settings and home</string>
+    <string name="create_profile_title">New profile</string>
+    <string name="create_profile_more">More options</string>
+    <string name="loader_vanilla_hint">No mods</string>
+    <string name="loader_fabric_hint">Light and fast</string>
+    <string name="loader_quilt_hint">Fabric fork</string>
+    <string name="loader_forge_hint">Most mods</string>
+    <string name="loader_neoforge_hint">Modern Forge</string>
+    <string name="loader_optifine_hint">Shaders and FPS</string>
+    <string name="mods_screen_title">Mods and modpacks</string>
+    <string name="mods_filters">Filters</string>
+    <string name="modpack_browse">Browse modpacks</string>
+    <string name="modpack_import">Import ZIP or mrpack</string>
+
+    <string name="loader_name_vanilla" translatable="false">Vanilla</string>
+    <string name="loader_name_fabric" translatable="false">Fabric</string>
+    <string name="loader_name_quilt" translatable="false">Quilt</string>
+    <string name="loader_name_forge" translatable="false">Forge</string>
+    <string name="loader_name_neoforge" translatable="false">NeoForge</string>
+    <string name="loader_name_optifine" translatable="false">OptiFine</string>
+
+    <string name="update_banner_text">Update %1$s is available</string>
 </resources>

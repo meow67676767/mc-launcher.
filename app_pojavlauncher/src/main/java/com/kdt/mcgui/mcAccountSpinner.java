@@ -107,7 +107,7 @@ public class mcAccountSpinner extends AppCompatSpinner implements AdapterView.On
     };
 
     private final ErrorListener mErrorListener = errorMessage -> {
-        mLoginBarPaint.setColor(Color.RED);
+        mLoginBarPaint.setColor(getResources().getColor(R.color.error));
         Context context = getContext();
         if(errorMessage instanceof PresentedException) {
             PresentedException exception = (PresentedException) errorMessage;
@@ -125,7 +125,7 @@ public class mcAccountSpinner extends AppCompatSpinner implements AdapterView.On
 
     /* Triggered when we need to do microsoft login */
     private final ExtraListener<Uri> mMicrosoftLoginListener = (key, value) -> {
-        mLoginBarPaint.setColor(getResources().getColor(R.color.minebutton_color));
+        mLoginBarPaint.setColor(getResources().getColor(R.color.cta_start));
         new MicrosoftBackgroundLogin(false, value.getQueryParameter("code")).performLogin(
                 mProgressListener, mDoneListener, mErrorListener);
         return false;
@@ -152,9 +152,10 @@ public class mcAccountSpinner extends AppCompatSpinner implements AdapterView.On
     @SuppressLint("ClickableViewAccessibility")
     private void init(){
         // Set visual properties
-        setBackgroundColor(getResources().getColor(R.color.background_status_bar));
-        mLoginBarPaint.setColor(getResources().getColor(R.color.minebutton_color));
+        setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.glass_pill, getContext().getTheme()));
+        mLoginBarPaint.setColor(getResources().getColor(R.color.cta_start));
         mLoginBarPaint.setStrokeWidth(getResources().getDimensionPixelOffset(R.dimen._2sdp));
+        mLoginBarPaint.setStrokeCap(Paint.Cap.ROUND);
 
         // Set behavior
         reloadAccounts(true, 0);
@@ -187,8 +188,11 @@ public class mcAccountSpinner extends AppCompatSpinner implements AdapterView.On
     protected void onDraw(Canvas canvas) {
         if(mLoginBarWidth == -1) mLoginBarWidth = getWidth(); // Initial draw
 
-        float bottom = getHeight() - mLoginBarPaint.getStrokeWidth()/2;
-        canvas.drawLine(0, bottom, mLoginBarWidth, bottom, mLoginBarPaint);
+        // Keep the progress line inside the rounded corners of the pill
+        float inset = getResources().getDimension(R.dimen.glass_radius_pill) * 0.7f;
+        float bottom = getHeight() - mLoginBarPaint.getStrokeWidth() * 1.5f;
+        float end = Math.min(mLoginBarWidth, getWidth() - inset);
+        if(end > inset) canvas.drawLine(inset, bottom, end, bottom, mLoginBarPaint);
     }
 
     public void removeCurrentAccount(){
@@ -285,7 +289,7 @@ public class mcAccountSpinner extends AppCompatSpinner implements AdapterView.On
         }
         if(minecraftAccount.isLocal()) return;
 
-        mLoginBarPaint.setColor(getResources().getColor(R.color.minebutton_color));
+        mLoginBarPaint.setColor(getResources().getColor(R.color.cta_start));
         if(minecraftAccount.isMicrosoft){
             if(System.currentTimeMillis() > minecraftAccount.expiresAt){
                 // Perform login only if needed
@@ -369,6 +373,13 @@ public class mcAccountSpinner extends AppCompatSpinner implements AdapterView.On
 
         @Override
         public View getDropDownView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+            View view = bindView(position, convertView, parent);
+            view.findViewById(R.id.account_expand).setVisibility(View.GONE);
+            view.setMinimumHeight(parent.getResources().getDimensionPixelSize(R.dimen.glass_row_height));
+            return view;
+        }
+
+        private View bindView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
             if(convertView == null){
                 convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_minecraft_account, parent, false);
             }
@@ -404,8 +415,10 @@ public class mcAccountSpinner extends AppCompatSpinner implements AdapterView.On
         @NonNull
         @Override
         public View getView(int position, View convertView, @NonNull ViewGroup parent) {
-            View view = getDropDownView(position, convertView, parent);
+            View view = bindView(position, convertView, parent);
             view.findViewById(R.id.delete_account_button).setVisibility(View.GONE);
+            view.findViewById(R.id.account_expand).setVisibility(View.VISIBLE);
+            view.setMinimumHeight(0);
             return view;
         }
 

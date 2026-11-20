@@ -1,6 +1,5 @@
 package com.kdt.mcgui;
 
-import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 import static net.kdt.pojavlaunch.fragments.ProfileEditorFragment.DELETED_PROFILE;
 
 import android.annotation.SuppressLint;
@@ -9,7 +8,6 @@ import android.os.Build;
 import android.transition.Slide;
 import android.transition.Transition;
 import android.util.AttributeSet;
-import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
@@ -96,13 +94,7 @@ public class mcVersionSpinner extends ExtendedTextView {
 
     /** Initialize various behaviors */
     private void init(){
-        // Setup various attributes
-        setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimensionPixelSize(R.dimen._12ssp));
-        setGravity(Gravity.CENTER_VERTICAL);
-        int startPadding = getContext().getResources().getDimensionPixelOffset(R.dimen._17sdp);
-        int endPadding = getContext().getResources().getDimensionPixelOffset(R.dimen._5sdp);
-        setPaddingRelative(startPadding, 0, endPadding, 0);
-        setCompoundDrawablePadding(startPadding);
+        // Text size, gravity and padding come from the layout
 
         int profileIndex;
         String extra_value = (String) ExtraCore.consumeValue(ExtraConstants.REFRESH_VERSION_SPINNER);
@@ -158,7 +150,8 @@ public class mcVersionSpinner extends ExtendedTextView {
             }
         });
 
-        mPopupWindow = new PopupWindow(mListView, MATCH_PARENT, getContext().getResources().getDimensionPixelOffset(R.dimen._184sdp));
+        mPopupWindow = new PopupWindow(mListView, Math.max(getWidth(), getResources().getDimensionPixelSize(R.dimen.glass_popup_min_width)), getContext().getResources().getDimensionPixelOffset(R.dimen._184sdp));
+        mPopupWindow.setBackgroundDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.glass_popup, null));
         mPopupWindow.setElevation(5);
         mPopupWindow.setClippingEnabled(false);
 

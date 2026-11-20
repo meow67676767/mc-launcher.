@@ -31,4 +31,22 @@
     <dimen name="fragment_padding_medium">@dimen/_10sdp</dimen>
     <!-- Misc paddings -->
     <dimen name="profile_editor_image_padding">@dimen/padding_small</dimen>
+
+    <!-- Glass and gradient metrics -->
+    <dimen name="glass_radius">20dp</dimen>
+    <dimen name="glass_radius_hero">26dp</dimen>
+    <dimen name="glass_radius_row">16dp</dimen>
+    <dimen name="glass_radius_button">14dp</dimen>
+    <dimen name="glass_radius_pill">20dp</dimen>
+    <dimen name="glass_stroke_width">1dp</dimen>
+    <dimen name="glass_stroke_width_selected">2dp</dimen>
+    <dimen name="glass_gap">10dp</dimen>
+    <dimen name="glass_screen_margin">20dp</dimen>
+    <dimen name="glass_top_bar_height">56dp</dimen>
+    <dimen name="glass_icon_button_size">40dp</dimen>
+    <dimen name="glass_row_height">44dp</dimen>
+    <dimen name="glass_tile_height">96dp</dimen>
+    <dimen name="glass_cta_height">64dp</dimen>
+    <dimen name="glass_cta_height_compact">56dp</dimen>
+    <dimen name="glass_popup_min_width">280dp</dimen>
 </resources>

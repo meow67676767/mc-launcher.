@@ -44,11 +44,35 @@ public final class UpdateChecker {
     private UpdateChecker() {}
 
     /** Holds one newer release found on GitHub. */
-    static final class Release {
+    public static final class Release {
         final String tag, name, notes, apkUrl;
         Release(String tag, String name, String notes, String apkUrl) {
             this.tag = tag; this.name = name; this.notes = notes; this.apkUrl = apkUrl;
         }
+        public String getTag() { return tag; }
+    }
+
+    /** An activity that shows a banner for the startup check instead of a dialog. */
+    public interface BannerHost {
+        void onUpdateAvailable(Release release);
+    }
+
+    /** Release found by the startup check, kept so the banner survives screen rotation. */
+    private static Release sBannerRelease = null;
+    private static boolean sBannerDismissed = false;
+
+    /** The release the banner should show right now, or null. */
+    public static Release getBannerRelease() {
+        return sBannerDismissed ? null : sBannerRelease;
+    }
+
+    public static void dismissBanner() {
+        sBannerDismissed = true;
+    }
+
+    /** Downloads and installs the release, with a progress dialog. */
+    public static void startDownload(Activity activity, Release rel) {
+        download(activity, rel);
     }
 
     /** Converts "v0.2.0" or "0.2.0-debug" to a comparable number, or -1. */
@@ -103,7 +127,11 @@ public final class UpdateChecker {
                 Release rel = pickNewer(new JSONArray(json), BuildConfig.VERSION_NAME, BuildConfig.DEBUG);
                 activity.runOnUiThread(() -> {
                     if (activity.isFinishing()) return;
-                    if (rel != null) showDialog(activity, rel);
+                    if (rel != null && !manual && activity instanceof BannerHost) {
+                        sBannerRelease = rel;
+                        sBannerDismissed = false;
+                        ((BannerHost) activity).onUpdateAvailable(rel);
+                    } else if (rel != null) showDialog(activity, rel);
                     else if (manual) Toast.makeText(activity, R.string.update_none, Toast.LENGTH_SHORT).show();
                 });
             } catch (Exception e) {

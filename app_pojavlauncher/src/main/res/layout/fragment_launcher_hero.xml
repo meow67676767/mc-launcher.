@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Selected profile card with the big play button. Sized by the including layout. -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_hero"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/glass_hero"
+    android:clipToOutline="true"
+    android:padding="16dp">
+
+    <!-- Decorative mascot -->
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:alpha="0.2"
+        android:importantForAccessibility="no"
+        android:rotation="12"
+        android:src="@mipmap/ic_launcher_foreground"
+        android:translationX="50dp"
+        android:translationY="-60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hero_label"
+        style="@style/Glass.Label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/main_selected_profile"
+        app:layout_constraintEnd_toStartOf="@id/edit_profile_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/edit_profile_button"
+        style="@style/Glass.IconButton"
+        android:contentDescription="@string/main_edit_profile"
+        android:src="@drawable/ic_gl_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.kdt.mcgui.mcVersionSpinner
+        android:id="@+id/mc_version_spinner"
+        style="@style/Glass.Heading.Hero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/transparent"
+        android:drawableEnd="@drawable/ic_gl_expand"
+        android:drawablePadding="12dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:minHeight="44dp"
+        android:textSize="22sp"
+        app:drawableEndSize="28dp"
+        app:drawableStartIntegerScaling="true"
+        app:drawableStartSize="40dp"
+        app:layout_constraintEnd_toStartOf="@id/edit_profile_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hero_label" />
+
+    <TextView
+        android:id="@+id/change_profile_button"
+        style="@style/Glass.Pill"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="6dp"
+        android:clickable="true"
+        android:drawableEnd="@drawable/ic_gl_swap"
+        android:drawablePadding="6dp"
+        android:focusable="true"
+        android:text="@string/main_change_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mc_version_spinner" />
+
+    <com.kdt.mcgui.MineButton
+        android:id="@+id/play_button"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/glass_cta_height_compact"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/ic_gl_play_dark"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/unbounded_bold"
+        android:gravity="center"
+        android:paddingStart="24dp"
+        android:paddingEnd="32dp"
+        android:text="@string/main_play"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        app:cta="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/change_profile_button"
+        app:layout_constraintVertical_bias="1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,38 +2,50 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_height="@dimen/_52sdp"
+    android:layout_height="wrap_content"
     android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/glass_icon_button_size"
     android:orientation="horizontal">
 
     <fr.spse.extended_view.ExtendedTextView
         android:id="@+id/account_item"
+        style="@style/Glass.Title"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-
-        android:textSize="@dimen/_16ssp"
+        android:drawablePadding="10dp"
+        android:ellipsize="end"
         android:gravity="center_vertical"
-        android:drawablePadding="@dimen/_6sdp"
-        android:paddingStart="@dimen/_8sdp"
-        app:drawableStartSize="@dimen/_30sdp"
+        android:minHeight="@dimen/glass_icon_button_size"
+        android:maxLines="1"
+        android:paddingStart="10dp"
+        android:paddingEnd="8dp"
+        android:textSize="14sp"
+        app:drawableStartSize="28dp"
 
-        tools:text="HELLO THERE"
+        tools:text="Steve"
         tools:drawableStart="@mipmap/ic_launcher"
 
-
         tools:ignore="RtlSymmetry" />
+
+    <!-- Only visible on the collapsed (selected) item -->
+    <ImageView
+        android:id="@+id/account_expand"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="8dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_gl_expand" />
 
     <!-- Fun fact, if I put an Image button, the spinner fails to put an onclick listener on the extended view -->
     <ImageView
         android:id="@+id/delete_account_button"
-        android:layout_width="@dimen/_52sdp"
-        android:layout_height="match_parent"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:background="?attr/selectableItemBackground"
         android:src="@drawable/ic_menu_delete_forever"
-
-        android:padding="@dimen/padding_moderate"
-        />
+        android:contentDescription="@string/global_delete"
+        android:padding="@dimen/padding_moderate" />
 
 </LinearLayout>
-

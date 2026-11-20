@@ -5,8 +5,9 @@
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
         <item name="android:windowContentOverlay">@null</item>
-        <item name="android:statusBarColor">@color/background_status_bar</item>
-        <item name="android:navigationBarColor">@color/background_app</item>
+        <item name="android:statusBarColor">@color/glass_bg_base</item>
+        <item name="android:navigationBarColor">@color/glass_bg_base</item>
+        <item name="android:fontFamily">@font/manrope_medium</item>
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
 
         <item name="android:textSize">@dimen/_12ssp</item>
@@ -38,5 +39,75 @@
         <item name="android:id">@id/dimension_tracker</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- Glass and gradient text styles -->
+    <style name="Glass.Heading" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/unbounded_bold</item>
+        <item name="android:textColor">@color/glass_text</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Glass.Heading.Hero">
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="Glass.Label" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/manrope_bold</item>
+        <item name="android:textColor">@color/glass_text_muted</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.12</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="Glass.Title" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/manrope_bold</item>
+        <item name="android:textColor">@color/glass_text</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Glass.Body" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/manrope_medium</item>
+        <item name="android:textColor">@color/glass_text</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Glass.Muted" parent="Glass.Body">
+        <item name="android:textColor">@color/glass_text_muted</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- Glass surfaces -->
+    <style name="Glass" />
+
+    <style name="Glass.IconButton">
+        <item name="android:layout_width">@dimen/glass_icon_button_size</item>
+        <item name="android:layout_height">@dimen/glass_icon_button_size</item>
+        <item name="android:background">@drawable/glass_pill</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="Glass.Row" parent="Glass.Title">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/glass_row_height</item>
+        <item name="android:background">@drawable/glass_row</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="Glass.Pill" parent="Glass.Title">
+        <item name="android:background">@drawable/glass_pill</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">14dp</item>
+        <item name="android:textSize">13sp</item>
     </style>
 </resources>

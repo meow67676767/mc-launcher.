@@ -431,4 +431,35 @@
     <string name="update_later">Позже</string>
     <string name="update_downloading">Скачивание обновления</string>
     <string name="update_allow_unknown_sources">Разрешите установку из этого источника и вернитесь в лаунчер</string>
+
+    <!-- Интерфейс «стекло и градиент» -->
+    <string name="main_selected_profile">Выбранный профиль</string>
+    <string name="main_change_profile">Сменить</string>
+    <string name="main_edit_profile">Изменить профиль</string>
+    <string name="tile_mods">Моды</string>
+    <string name="tile_mods_hint">Сборки</string>
+    <string name="tile_profiles">Профили</string>
+    <string name="tile_profiles_hint">Версии, загрузчики</string>
+    <string name="tile_controls">Управление</string>
+    <string name="tile_controls_hint">Сенсорные кнопки</string>
+    <string name="row_settings">Настройки</string>
+    <string name="row_logs">Логи</string>
+    <string name="row_game_folder">Папка игры</string>
+    <string name="update_banner_action">Обновить</string>
+    <string name="update_banner_dismiss">Закрыть</string>
+    <string name="settings_button_description">Настройки и главный экран</string>
+    <string name="create_profile_title">Новый профиль</string>
+    <string name="create_profile_more">Ещё</string>
+    <string name="loader_vanilla_hint">Без модов</string>
+    <string name="loader_fabric_hint">Лёгкий и быстрый</string>
+    <string name="loader_quilt_hint">Форк Fabric</string>
+    <string name="loader_forge_hint">Больше всего модов</string>
+    <string name="loader_neoforge_hint">Новый Forge</string>
+    <string name="loader_optifine_hint">Шейдеры и FPS</string>
+    <string name="mods_screen_title">Моды и сборки</string>
+    <string name="mods_filters">Фильтры</string>
+    <string name="modpack_browse">Каталог сборок</string>
+    <string name="modpack_import">Импорт ZIP или mrpack</string>
+
+    <string name="update_banner_text">Доступно обновление %1$s</string>
 </resources>

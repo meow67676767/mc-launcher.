@@ -1,53 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/transparent">
+    android:background="@drawable/bg_app_gradient">
+
+    <ImageView
+        android:id="@+id/launcher_logo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/glass_screen_margin"
+        android:layout_marginTop="8dp"
+        android:importantForAccessibility="no"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/launcher_title"
+        style="@style/Glass.Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/app_name"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/launcher_logo"
+        app:layout_constraintStart_toEndOf="@id/launcher_logo"
+        app:layout_constraintTop_toTopOf="@id/launcher_logo" />
 
     <com.kdt.mcgui.mcAccountSpinner
         android:id="@+id/account_spinner"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_42sdp"
-
-        android:dropDownWidth="wrap_content"
-        android:dropDownVerticalOffset="@dimen/_42sdp"
-
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/glass_icon_button_size"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
+        android:dropDownWidth="260dp"
+        android:dropDownVerticalOffset="44dp"
+        android:popupBackground="@drawable/glass_popup"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/launcher_logo"
+        app:layout_constraintEnd_toStartOf="@id/setting_button"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/launcher_title"
+        app:layout_constraintTop_toTopOf="@id/launcher_logo" />
 
     <ImageButton
         android:id="@+id/setting_button"
-        android:layout_width="@dimen/_52sdp"
-        android:layout_height="@dimen/_42sdp"
-        android:background="?attr/selectableItemBackground"
-        android:src="@drawable/ic_menu_settings"
-        android:scaleType="fitCenter"
-
+        style="@style/Glass.IconButton"
+        android:layout_marginEnd="@dimen/glass_screen_margin"
+        android:contentDescription="@string/settings_button_description"
+        android:src="@drawable/ic_gl_settings"
+        app:layout_constraintBottom_toBottomOf="@id/launcher_logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/launcher_logo" />
 
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/top_bar_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:barrierMargin="8dp"
+        app:constraint_referenced_ids="launcher_logo,account_spinner,setting_button" />
 
+    <!-- Shown when a newer release is found on startup -->
+    <LinearLayout
+        android:id="@+id/update_banner"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="@dimen/glass_screen_margin"
+        android:layout_marginEnd="@dimen/glass_screen_margin"
+        android:background="@drawable/glass_banner"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="14dp"
+        android:paddingEnd="6dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar_barrier"
+        app:layout_constraintWidth_max="470dp"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_gl_sparkle"
+            android:tint="@color/cta_start" />
+
+        <TextView
+            android:id="@+id/update_banner_text"
+            style="@style/Glass.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="14sp"
+            tools:text="Доступно обновление v0.3.0" />
+
+        <com.kdt.mcgui.MineButton
+            android:id="@+id/update_banner_install"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="0dp"
+            android:text="@string/update_banner_action"
+            android:textSize="13sp"
+            app:cta="true" />
+
+        <ImageButton
+            android:id="@+id/update_banner_dismiss"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/glass_button"
+            android:contentDescription="@string/update_banner_dismiss"
+            android:padding="8dp"
+            android:src="@drawable/ic_gl_close" />
+    </LinearLayout>
 
     <!-- Holding most of the dynamic content -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container_fragment"
-
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/progress_layout"
-        app:layout_constraintTop_toBottomOf="@+id/account_spinner" />
-
+        app:layout_constraintTop_toBottomOf="@id/update_banner" />
 
     <com.kdt.mcgui.ProgressLayout
         android:id="@+id/progress_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         app:layout_constraintBottom_toBottomOf="parent" />
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

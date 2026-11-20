@@ -17,6 +17,7 @@ import android.provider.OpenableColumns;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -71,7 +72,7 @@ import java.text.ParseException;
 import java.util.List;
 import java.util.Locale;
 
-public class LauncherActivity extends BaseActivity {
+public class LauncherActivity extends BaseActivity implements net.kdt.pojavlaunch.utils.UpdateChecker.BannerHost {
     public static final String SETTING_FRAGMENT_TAG = "SETTINGS_FRAGMENT";
 
     public final ActivityResultLauncher<Object> modInstallerLauncher =
@@ -130,6 +131,8 @@ public class LauncherActivity extends BaseActivity {
     private FragmentContainerView mFragmentView;
     private ImageButton mSettingsButton;
     private ProgressLayout mProgressLayout;
+    private View mUpdateBanner;
+    private TextView mUpdateBannerText;
     private ProgressServiceKeeper mProgressServiceKeeper;
     private ModloaderInstallTracker mInstallTracker;
     private NotificationManager mNotificationManager;
@@ -139,7 +142,7 @@ public class LauncherActivity extends BaseActivity {
         @Override
         public void onFragmentResumed(@NonNull FragmentManager fm, @NonNull Fragment f) {
             mSettingsButton.setImageDrawable(ContextCompat.getDrawable(getBaseContext(), f instanceof MainMenuFragment
-                    ? R.drawable.ic_menu_settings : R.drawable.ic_menu_home));
+                    ? R.drawable.ic_gl_settings : R.drawable.ic_gl_home));
         }
     };
 
@@ -356,6 +359,8 @@ public class LauncherActivity extends BaseActivity {
         ContextExecutor.setActivity(this);
         mInstallTracker.attach();
         net.kdt.pojavlaunch.utils.UpdateChecker.resumePendingInstall(this);
+        net.kdt.pojavlaunch.utils.UpdateChecker.Release bannerRelease = net.kdt.pojavlaunch.utils.UpdateChecker.getBannerRelease();
+        if (bannerRelease != null) onUpdateAvailable(bannerRelease);
     }
 
     @Override
@@ -490,5 +495,22 @@ public class LauncherActivity extends BaseActivity {
         mSettingsButton = findViewById(R.id.setting_button);
         mAccountSpinner = findViewById(R.id.account_spinner);
         mProgressLayout = findViewById(R.id.progress_layout);
+        mUpdateBanner = findViewById(R.id.update_banner);
+        mUpdateBannerText = findViewById(R.id.update_banner_text);
+        findViewById(R.id.update_banner_dismiss).setOnClickListener(v -> {
+            net.kdt.pojavlaunch.utils.UpdateChecker.dismissBanner();
+            mUpdateBanner.setVisibility(View.GONE);
+        });
+        findViewById(R.id.update_banner_install).setOnClickListener(v -> {
+            net.kdt.pojavlaunch.utils.UpdateChecker.Release release =
+                    net.kdt.pojavlaunch.utils.UpdateChecker.getBannerRelease();
+            if (release != null) net.kdt.pojavlaunch.utils.UpdateChecker.startDownload(this, release);
+        });
+    }
+
+    @Override
+    public void onUpdateAvailable(net.kdt.pojavlaunch.utils.UpdateChecker.Release release) {
+        mUpdateBannerText.setText(getString(R.string.update_banner_text, release.getTag()));
+        mUpdateBanner.setVisibility(View.VISIBLE);
     }
 }
