@@ -136,6 +136,7 @@ public class mcAccountSpinner extends AppCompatSpinner implements AdapterView.On
         if(value[1].isEmpty()){ // Test mode
             MinecraftAccount account = new MinecraftAccount();
             account.username = value[0];
+            account.profileId = MinecraftAccount.offlineUuid(value[0]);
             try {
                 account.save();
             }catch (IOException e){

@@ -1841,9 +1841,10 @@ public final class Tools {
         MinecraftAccount currentProfile = PojavProfile.getCurrentProfileContent(ctx, null);
         return currentProfile == null || currentProfile.isLocal();
     }
+    /** @return Whether any usable account exists. Offline (local) accounts count as usable. */
     public static boolean hasOnlineProfile(){
         for (MinecraftAccount accountToCheck : getAllProfiles()) {
-            if (!accountToCheck.isLocal() && !accountToCheck.isDemo()) {
+            if (!accountToCheck.isDemo()) {
                 return true;
             }
         }

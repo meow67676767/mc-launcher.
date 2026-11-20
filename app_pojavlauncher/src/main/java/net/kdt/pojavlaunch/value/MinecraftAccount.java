@@ -45,6 +45,12 @@ public class MinecraftAccount {
         }
     }
 
+    /** Same UUID that a vanilla server in offline mode assigns to this nickname. */
+    public static String offlineUuid(String username) {
+        return java.util.UUID.nameUUIDFromBytes(
+                ("OfflinePlayer:" + username).getBytes(java.nio.charset.StandardCharsets.UTF_8)).toString();
+    }
+
     public boolean isLocal(){
         return accessToken.equals("0") && !username.startsWith("Demo.");
     }

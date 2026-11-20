@@ -1,3 +1,20 @@
+# MC Launcher
+
+MC Launcher — форк [Amethyst Android](https://github.com/AngelAuraMC/Amethyst-Android) для запуска Minecraft Java Edition на Android.
+Исходный код распространяется по лицензии LGPL-3.0, как и у Amethyst. Все авторские права авторов Amethyst и PojavLauncher сохранены.
+
+Отличия от Amethyst:
+
+- Вход по умолчанию — офлайн-аккаунт с ником. Аккаунт Microsoft не обязателен.
+- Офлайн-аккаунт получает тот же UUID, что и на сервере с `online-mode=false`.
+- Своё имя приложения и свой ID пакета (`io.github.meow67676767.mclauncher`), поэтому APK ставится рядом с Amethyst.
+
+Для игры нужна купленная Minecraft Java Edition. Соблюдайте [Minecraft EULA](https://www.minecraft.net/eula).
+
+Готовый отладочный APK собирает GitHub Actions: вкладка Actions → последняя сборка → артефакт `app-debug (recommended)`.
+
+---
+
 <h1 align="center">Angel Aura Amethyst</h1>
 
 <img src="https://github.com/AngelAuraMC/Amethyst-Android/blob/v3_openjdk/app_pojavlauncher/src/main/assets/amethyst.png" align="left" width="130" height="130" alt="Amethyst logo">

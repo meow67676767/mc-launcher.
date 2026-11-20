@@ -406,8 +406,8 @@
     <string name="demo_versions_supported">Только ванильные версии от 1.3.1 поддерживается для демонстрационных учётных записей</string>
     <string name="demo_unsupported">Демо-профиль не поддерживается</string>
     <string name="change_account">Пожалуйста, измените учётную запись для использования этой функции</string>
-    <string name="no_minecraft_account_found">Не найдено учётной записи Minecraft</string>
-    <string name="feature_requires_java_account">Для этой функции требуется учётная запись Microsoft, владеющая копией Minecraft Java Edition.</string>
+    <string name="no_minecraft_account_found">Нет аккаунта</string>
+    <string name="feature_requires_java_account">Сначала добавьте аккаунт. Достаточно офлайн-аккаунта с ником.</string>
     <string name="delete_account_and_login">Удалить учётную запись и войти</string>
     <string name="login_again">Пожалуйста, войдите снова</string>
     <string name="account_corrupted">Выбранная учётная запись повреждена</string>
@@ -419,4 +419,6 @@
     <string name="preference_force_enable_touchcontroller_description">Принудительно включает интеграцию сенсорного контроллера, даже если файл мода не найден.</string>
     <string name="preference_touchcontroller_vibrate_length_title">Длина вибрации сенсорного контроллера</string>
     <string name="preference_touchcontroller_vibrate_length_description">Установите продолжительность вибрации при использовании сенсорного контроллера.</string>
+    <string name="auth_offline_button">Офлайн-аккаунт (ник)</string>
+    <string name="auth_microsoft_optional_button">Аккаунт Microsoft (по желанию)</string>
 </resources>

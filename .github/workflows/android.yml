@@ -28,45 +28,21 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: Get JRE 8
-        uses: dawidd6/action-download-artifact@v9
-        with:
-          workflow: build.yml
-          path: app_pojavlauncher/src/main/assets/components/jre
-          workflow_conclusion: completed
-          repo: AngelAuraMC/angelauramc-openjdk-build
-          branch: buildjre8
-          name: jre8-pojav
+      - name: Get JRE 8 (from the Amethyst 1.1.7 release APK)
+        run: |
+          curl -sSL -o amethyst.apk https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.7/Amethyst.apk
+          unzip -q -o amethyst.apk 'assets/components/jre/*' -d jre-extract
+          mkdir -p app_pojavlauncher/src/main/assets/components/jre
+          cp jre-extract/assets/components/jre/* app_pojavlauncher/src/main/assets/components/jre/
+          rm -rf amethyst.apk jre-extract
 
-      # - name: Get JRE17
-      #   uses: dawidd6/action-download-artifact@v9
-      #   with:
-      #     workflow: build.yml
-      #     path: app_pojavlauncher/src/main/assets/components/jre-new
-      #     workflow_conclusion: completed
-      #     repo: AngelAuraMC/angelauramc-openjdk-build
-      #     branch: buildjre17-21
-      #     name: jre17-pojav
-      #
-      # - name: Get JRE21
-      #   uses: dawidd6/action-download-artifact@v9
-      #   with:
-      #     workflow: build.yml
-      #     path: app_pojavlauncher/src/main/assets/components/jre-21
-      #     workflow_conclusion: completed
-      #     repo: AngelAuraMC/angelauramc-openjdk-build
-      #     branch: buildjre17-21
-      #     name: jre21-pojav
-      #
-      # - name: Get JRE25
-      #   uses: dawidd6/action-download-artifact@v9
-      #   with:
-      #     workflow: build.yml
-      #     path: app_pojavlauncher/src/main/assets/components/jre-25
-      #     workflow_conclusion: completed
-      #     repo: FCL-Team/Android-OpenJDK-Build
-      #     branch: Build_JRE_25
-      #     name: jre25-multiarch
+      - name: Set up JDK 8 (needed by MioLibPatcher toolchain)
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: |
+            8
+            21
 
       - uses: gradle/actions/setup-gradle@v4
         with:
@@ -77,16 +53,6 @@ jobs:
         run: |
           ./scripts/languagelist_updater.sh
           mkdir out
-
-      - name: Build Release .apk
-        run: |
-          # Build the launcher
-          gradle :app_pojavlauncher:assembleRelease
-          mv app_pojavlauncher/build/outputs/apk/release/app_pojavlauncher-release.apk out/app-release.apk
-
-      - name: Gen md5sums
-        run: |
-          md5sum out/app-release.apk > out/app-release.md5
 
       - name: Build Debug .apk
         run: |
@@ -103,9 +69,3 @@ jobs:
         with:
           name: app-debug (recommended)
           path: out/app-debug.*
-
-      - name: Upload release APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: app-release
-          path: out/app-release.*
