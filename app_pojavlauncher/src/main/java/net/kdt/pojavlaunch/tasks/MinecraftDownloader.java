@@ -59,6 +59,8 @@ public class MinecraftDownloader {
     private File mTargetJarFile; // The destination client JAR to which the source will be copied to.
     private boolean mUseFileCounter; // Whether a file counter or a size counter should be used for progress
 
+    /** Number of files that download at the same time. Upstream used 4. */
+    static final int DOWNLOAD_THREADS = 16;
     private static final ThreadLocal<byte[]> sThreadLocalDownloadBuffer = new ThreadLocal<>();
 
     // True when there is no activity: only check installed files, do not download.
@@ -147,8 +149,9 @@ public class MinecraftDownloader {
 
         ArrayBlockingQueue<Runnable> taskQueue =
                 new ArrayBlockingQueue<>(mScheduledDownloadTasks.size(), false);
+        // Most game files are small assets, so the speed depends on how many run at once.
         ThreadPoolExecutor downloaderPool =
-                new ThreadPoolExecutor(4, 4, 500, TimeUnit.MILLISECONDS, taskQueue);
+                new ThreadPoolExecutor(DOWNLOAD_THREADS, DOWNLOAD_THREADS, 500, TimeUnit.MILLISECONDS, taskQueue);
 
         // I have tried pre-filling the queue directly instead of doing this, but it didn't work.
         // What a shame.
