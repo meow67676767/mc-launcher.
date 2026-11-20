@@ -96,11 +96,19 @@
         <item name="android:drawablePadding">10dp</item>
         <item name="android:paddingStart">14dp</item>
         <item name="android:paddingEnd">10dp</item>
-        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">2</item>
         <item name="android:ellipsize">end</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">13sp</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
+    </style>
+
+    <!-- A row whose label may wrap to two lines instead of being clipped -->
+    <style name="Glass.Row.Wrap">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/glass_row_height</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
     </style>
 
     <style name="Glass.Pill" parent="Glass.Title">

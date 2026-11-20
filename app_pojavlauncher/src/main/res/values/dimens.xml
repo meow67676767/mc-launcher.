@@ -45,7 +45,7 @@
     <dimen name="glass_top_bar_height">56dp</dimen>
     <dimen name="glass_icon_button_size">40dp</dimen>
     <dimen name="glass_row_height">44dp</dimen>
-    <dimen name="glass_tile_height">96dp</dimen>
+    <dimen name="glass_tile_height">120dp</dimen>
     <dimen name="glass_cta_height">64dp</dimen>
     <dimen name="glass_cta_height_compact">56dp</dimen>
     <dimen name="glass_popup_min_width">280dp</dimen>

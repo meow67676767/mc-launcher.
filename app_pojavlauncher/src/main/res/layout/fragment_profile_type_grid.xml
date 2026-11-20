@@ -15,7 +15,7 @@
         <com.kdt.mcgui.GlassTile
             android:id="@+id/vanilla_profile"
             android:layout_width="0dp"
-            android:layout_height="112dp"
+            android:layout_height="@dimen/glass_tile_height"
             android:layout_weight="1"
             app:tileAccent="@color/loader_vanilla"
             app:tileBadge="V"
@@ -29,7 +29,7 @@
         <com.kdt.mcgui.GlassTile
             android:id="@+id/modded_profile_fabric"
             android:layout_width="0dp"
-            android:layout_height="112dp"
+            android:layout_height="@dimen/glass_tile_height"
             android:layout_weight="1"
             app:tileAccent="@color/loader_fabric"
             app:tileBadge="F"
@@ -43,7 +43,7 @@
         <com.kdt.mcgui.GlassTile
             android:id="@+id/modded_profile_quilt"
             android:layout_width="0dp"
-            android:layout_height="112dp"
+            android:layout_height="@dimen/glass_tile_height"
             android:layout_weight="1"
             app:tileAccent="@color/loader_quilt"
             app:tileBadge="Q"
@@ -63,7 +63,7 @@
         <com.kdt.mcgui.GlassTile
             android:id="@+id/modded_profile_forge"
             android:layout_width="0dp"
-            android:layout_height="112dp"
+            android:layout_height="@dimen/glass_tile_height"
             android:layout_weight="1"
             app:tileHighlighted="true"
             app:tileAccent="@color/loader_forge"
@@ -78,7 +78,7 @@
         <com.kdt.mcgui.GlassTile
             android:id="@+id/modded_profile_neoforge"
             android:layout_width="0dp"
-            android:layout_height="112dp"
+            android:layout_height="@dimen/glass_tile_height"
             android:layout_weight="1"
             app:tileAccent="@color/loader_neoforge"
             app:tileBadge="N"
@@ -92,7 +92,7 @@
         <com.kdt.mcgui.GlassTile
             android:id="@+id/optifine_profile"
             android:layout_width="0dp"
-            android:layout_height="112dp"
+            android:layout_height="@dimen/glass_tile_height"
             android:layout_weight="1"
             app:tileAccent="@color/loader_optifine"
             app:tileBadge="O"

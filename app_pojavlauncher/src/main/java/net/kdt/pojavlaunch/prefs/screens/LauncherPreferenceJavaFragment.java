@@ -53,6 +53,8 @@ public class LauncherPreferenceJavaFragment extends LauncherPreferenceFragment {
         memorySeekbar.setMaxKeepIncrement(maxRAM);
         memorySeekbar.setValue(ramAllocation);
         memorySeekbar.setSuffix(" MB");
+        memorySeekbar.setSummary(getString(R.string.mcl_memory_allocation_subtitle) + "\n"
+                + getString(R.string.mcl_memory_allocation_hint, deviceRam));
 
         EditTextPreference editJVMArgs = findPreference("javaArgs");
         if (editJVMArgs != null) {

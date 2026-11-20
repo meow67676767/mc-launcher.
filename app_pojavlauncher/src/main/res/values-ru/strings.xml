@@ -129,7 +129,7 @@
     <string name="customctrl_selectdefault">Выбрать основную</string>
     <string name="customctrl_export">Поделиться раскладкой</string>
     <string name="main_share_logs">Поделиться журналом</string>
-    <string name="main_install_jar_file">Запустить .jar</string>
+    <string name="main_install_jar_file">Запуск .jar</string>
     <string name="main_play">Играть</string>
     <string name="autoram_info_msg">Выделено %d Мбайт ОЗУ</string>
     <string name="mcl_setting_check_libraries">Проверка библиотек после загрузки</string>
@@ -151,6 +151,7 @@
     <string name="address_memory_warning_msg">Текущий объём линейно адресуемой оперативной памяти (%d) меньше, чем выделенная (%d), что может привести к сбою. В случае сбоя игры измените количество выделенной памяти.</string>
     <string name="mcl_memory_allocation">Выделение памяти</string>
     <string name="mcl_memory_allocation_subtitle">Управление объёмом выделяемой игре памяти.</string>
+    <string name="mcl_memory_allocation_hint">Память устройства: %1$d МБ. Максимум — минус 1 ГБ для Android.</string>
     <string name="multirt_runtime_corrupt">Среда выполнения Java повреждена</string>
     <string name="multirt_runtime_incompatiblearch">Несовместимая архитектура: %s</string>
     <string name="multirt_config_title">Среды выполнения Java</string>

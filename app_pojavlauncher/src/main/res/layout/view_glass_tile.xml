@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
@@ -7,7 +8,8 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_gravity="top|start"
-        android:layout_margin="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="12dp"
         android:importantForAccessibility="no"
         android:visibility="gone"
         tools:src="@drawable/ic_gl_mods"
@@ -19,7 +21,8 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_gravity="top|start"
-        android:layout_margin="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:importantForAccessibility="no"
         android:textColor="@color/glass_ink"
@@ -54,6 +57,10 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="1"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="11sp"
+            app:autoSizeMaxTextSize="16sp"
+            app:autoSizeStepGranularity="1sp"
             tools:text="Моды" />
 
         <TextView
