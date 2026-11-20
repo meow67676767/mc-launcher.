@@ -1,6 +1,6 @@
-# MC Launcher
+# PocketCraft Java
 
-MC Launcher — форк [Amethyst Android](https://github.com/AngelAuraMC/Amethyst-Android) для запуска Minecraft Java Edition на Android.
+PocketCraft Java — форк [Amethyst Android](https://github.com/AngelAuraMC/Amethyst-Android) для запуска Minecraft Java Edition на Android.
 Исходный код распространяется по лицензии LGPL-3.0, как и у Amethyst. Все авторские права авторов Amethyst и PojavLauncher сохранены.
 
 Отличия от Amethyst:
