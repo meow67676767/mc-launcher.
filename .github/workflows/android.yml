@@ -30,7 +30,7 @@ jobs:
 
       - name: Get JRE 8 (from the Amethyst 1.1.7 release APK)
         run: |
-          curl -sSL -o amethyst.apk https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.7/Amethyst.apk
+          curl -fsSL -o amethyst.apk https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.7/Amethyst.apk
           unzip -q -o amethyst.apk 'assets/components/jre/*' -d jre-extract
           mkdir -p app_pojavlauncher/src/main/assets/components/jre
           cp jre-extract/assets/components/jre/* app_pojavlauncher/src/main/assets/components/jre/

@@ -61,7 +61,8 @@ public class MinecraftDownloader {
 
     private static final ThreadLocal<byte[]> sThreadLocalDownloadBuffer = new ThreadLocal<>();
 
-    private boolean isLocalProfile = false;
+    // True when there is no activity: only check installed files, do not download.
+    private boolean verifyOnly = false;
     private boolean isOnline;
 
     /**
@@ -75,18 +76,19 @@ public class MinecraftDownloader {
                       @NonNull String realVersion,
                       @NonNull AsyncMinecraftDownloader.DoneListener listener) {
         if(activity != null){
-            isLocalProfile = Tools.isLocalProfile(activity);
+            // Offline (local) accounts download the game like Microsoft accounts do.
+            verifyOnly = false;
             isOnline = Tools.isOnline(activity);
             Tools.switchDemo(Tools.isDemoProfile(activity));
 
         } else {
-            isLocalProfile = true;
+            verifyOnly = true;
             Tools.switchDemo(true);
         }
 
         sExecutorService.execute(() -> {
             try {
-                if(isLocalProfile || !isOnline) {
+                if(verifyOnly || !isOnline) {
                     String versionMessage = realVersion; // Use provided version unless we find its a modded instance
 
                     // See if provided version is a modded version and if that version depends on another jar, check for presence of both jar's .json.
@@ -105,7 +107,7 @@ public class MinecraftDownloader {
 
                         listener.onDownloadDone();
                     } catch (Exception e) {
-                        String tryagain = !isOnline ? "Please ensure you have an internet connection" : "Please try again on your Microsoft Account";
+                        String tryagain = !isOnline ? "Please ensure you have an internet connection" : "Please try again with an internet connection";
                         Tools.showErrorRemote(versionMessage + " is not currently installed. "+ tryagain, e);
                     }
                 }else {

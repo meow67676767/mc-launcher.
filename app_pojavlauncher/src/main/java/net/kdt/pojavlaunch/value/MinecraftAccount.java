@@ -89,6 +89,10 @@ public class MinecraftAccount {
             if (acc.profileId == null) {
                 acc.profileId = "00000000-0000-0000-0000-000000000000";
             }
+            // Old offline accounts were saved with the zero UUID. Use the vanilla offline-mode UUID instead.
+            if (acc.username != null && acc.isLocal() && "00000000-0000-0000-0000-000000000000".equals(acc.profileId)) {
+                acc.profileId = offlineUuid(acc.username);
+            }
             if (acc.username == null) {
                 acc.username = "0";
             }
