@@ -138,8 +138,6 @@
     <string name="preference_sustained_performance_description">Limiteer thermische beperking door het beperken van piekprestaties.</string>
     <string name="preference_force_vsync_title">Forceer het inschakelen van VSync</string>
     <string name="preference_force_vsync_description">Limiteer thermische beperking door het beperken van piekprestaties.</string>
-    <string name="preference_force_english_title">Forceer de taal naar Engels</string>
-    <string name="preference_force_english_description">Maakt het mogelijk om originele tekenreeksen te zien, zoals bedoeld door ontwikkelaars. Vereist een herstart.</string>
     <string name="preference_edit_controls_title">Aangepaste besturing bewerken</string>
     <string name="preference_edit_controls_summary">Pas het controleschema aan aan uw behoeften aan.</string>
     <string name="preference_category_gyro_controls">Gyroscoop besturing</string>

@@ -156,8 +156,6 @@
     <string name="preference_sustained_performance_description">Περιορισμός της θερμικής επιτάχυνσης με περιορισμό των επιδόσεων.</string>
     <string name="preference_force_vsync_title">Εξαναγκασμός ενεργοποίησης VSync</string>
     <string name="preference_force_vsync_description">Περιορισμός της θερμικής επιτάχυνσης με περιορισμό των επιδόσεων.</string>
-    <string name="preference_force_english_title">Επιβολή γλώσσας στα αγγλικά</string>
-    <string name="preference_force_english_description">Σας επιτρέπει να δείτε τα αρχικά strings, όπως προορίζονται από τους προγραμματιστές. Απαιτεί επανεκκίνηση.</string>
     <string name="preference_edit_controls_title">Προσαρμοστεί τα controls</string>
     <string name="preference_edit_controls_summary">Ρυθμίστε το σύστημα ελέγχου για να ταιριάζει στις ανάγκες σας.</string>
     <string name="preference_category_gyro_controls">Έλεγχοι γυροσκοπίου</string>

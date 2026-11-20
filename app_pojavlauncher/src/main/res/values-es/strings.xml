@@ -172,8 +172,6 @@
     <string name="preference_sustained_performance_description">Limita la regulación térmica limitando el rendimiento máximo.</string>
     <string name="preference_force_vsync_title">Fuerza el VSync</string>
     <string name="preference_force_vsync_description">Limita la regulación térmica limitando el rendimiento máximo.</string>
-    <string name="preference_force_english_title">Forzar idioma al Inglés</string>
-    <string name="preference_force_english_description">Le permite ver las cadenas originales, según lo previsto por los desarrolladores. Requiere un reinicio.</string>
     <string name="preference_edit_controls_title">Editar controles personalizados</string>
     <string name="preference_edit_controls_summary">Ajusta la configuración de controles para ajustarla a tus necesidades.</string>
     <string name="preference_category_gyro_controls">Controles del Giroscopio</string>

@@ -185,8 +185,6 @@
     <string name="preference_sustained_performance_description">Durch Begrenzung der Laufleistung das Eintreten des Hitzeschutz (thermaler Drosselung) verhindern.</string>
     <string name="preference_force_vsync_title">V-Sync erzwingen</string>
     <string name="preference_force_vsync_description">Durch Begrenzung der Laufleistung das Eintreten des Hitzeschutz (thermaler Drosselung) verhindern.</string>
-    <string name="preference_force_english_title">Englische Sprache erzwingen</string>
-    <string name="preference_force_english_description">Verwendet die originalen Beschriftungen, wie von Entwicklern vorgesehen. Benötigt einen Neustart.</string>
     <string name="preference_edit_controls_title">Benutzerdefinierte Steuerung bearbeiten</string>
     <string name="preference_edit_controls_summary">Die Steuerung nach deinen Präferenzen anpassen.</string>
     <string name="preference_category_gyro_controls">Gyroskop-Steuerung</string>

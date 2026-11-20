@@ -76,7 +76,6 @@
     <string name="dl_library_sha_pass">La llibreria %s està bé i és utilitzable</string>
     <string name="mcl_disable_gestures">Desactiva gestos</string>
     <string name="mcl_disable_gestures_subtitle">Desactiva els gestos, com mantenir per trencar blocs i tocar per col·locar-ne.</string>
-    <string name="preference_force_english_description">Et permet veure les cadenes de text originals, com volen els desenvolupadors. Cal reiniciar.</string>
     <string name="preference_edit_controls_title">Edita controls personalitzats</string>
     <string name="preference_edit_controls_summary">Canvia l\'esquema de control perquè s\'ajusti a les teves necessitats.</string>
     <string name="preference_category_gyro_controls">Controls de giroscopi</string>

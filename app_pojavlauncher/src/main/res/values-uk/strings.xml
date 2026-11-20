@@ -186,8 +186,6 @@
     <string name="preference_sustained_performance_description">Обмежити перегрів пристрою шляхом обмеження пікової продуктивности.</string>
     <string name="preference_force_vsync_title">Увімкнути вертикальну синхронізацію</string>
     <string name="preference_force_vsync_description">Обмежити перегрів пристрою шляхом обмеження пікової продуктивности.</string>
-    <string name="preference_force_english_title">Змінити мову на англійську</string>
-    <string name="preference_force_english_description">Дозволяє побачити оригінальні рядки, як було задумано розробниками. Потребує перезапуску.</string>
     <string name="preference_edit_controls_title">Редагувати елементи керування</string>
     <string name="preference_edit_controls_summary">Налаштувати схему керування відповідно до потреб.</string>
     <string name="preference_category_gyro_controls">Керування гіроскопом</string>

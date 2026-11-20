@@ -135,8 +135,6 @@
     <string name="preference_sustained_performance_title">Enable sustaind performance mode</string>
     <string name="preference_sustained_performance_description">Limit thermal throttling by limitin\' peak purrformance.</string>
     <string name="preference_force_vsync_description">Limit thermal throttling by limitin\' peak purrformance.</string>
-    <string name="preference_force_english_title">Force language to Burger King</string>
-    <string name="preference_force_english_description">Allows yu to see original stringz, as intended by developurz. Requirez a restart.</string>
     <string name="preference_edit_controls_title">Change custom controls</string>
     <string name="preference_edit_controls_summary">Tweak da control scheme to fit yor needz.</string>
     <string name="preference_category_gyro_controls">Moving Phone controls</string>

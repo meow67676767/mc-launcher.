@@ -162,8 +162,6 @@
     <string name="preference_sustained_performance_description">الحد من الاختناق الحراري عن طريق حد الأداء الأقصى.</string>
     <string name="preference_force_vsync_title">أجبار على تفعيل VSync</string>
     <string name="preference_force_vsync_description">الحد من الاختناق الحراري عن طريق حد الأداء الأقصى.</string>
-    <string name="preference_force_english_title">إجبار تحويل اللغة إلى اللغة الإنجليزية</string>
-    <string name="preference_force_english_description">يسمح لك برؤية النصوص الأصلية، كما أرادها المطورون. يتطلب إعادة التشغيل.</string>
     <string name="preference_edit_controls_title">تعديل مخطط التحكم</string>
     <string name="preference_edit_controls_summary">عدل مخطط التحكم لتلبي احتياجاتك.</string>
     <string name="preference_category_gyro_controls">تحكم باستخدام الجايروسكوب</string>

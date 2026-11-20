@@ -160,8 +160,6 @@
     <string name="preference_sustained_performance_description">با محدود کردن اوج عملکرد فشار حرارتی را محدود کنید.</string>
     <string name="preference_force_vsync_title">روشن کردن VSync اجباری</string>
     <string name="preference_force_vsync_description">با محدود کردن اوج عملکرد فشار حرارتی را محدود کنید.</string>
-    <string name="preference_force_english_title">اجبار زبان به انگلیسی</string>
-    <string name="preference_force_english_description">به شما اجازه میدهد متون اصلی ارائه شده توسط توسعه دهندگان را ببینید. نیاز به اجرای برنامه.</string>
     <string name="preference_edit_controls_title">ویرایش کنترل های شخصی</string>
     <string name="preference_edit_controls_summary">طرح کنترل را متناسب با نیازهای خود تغییر دهید.</string>
     <string name="preference_category_gyro_controls">کنترل با ژیروسکوپ</string>

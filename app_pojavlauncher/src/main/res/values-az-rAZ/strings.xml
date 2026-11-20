@@ -129,8 +129,6 @@
     <string name="preference_sustained_performance_description">Pik performansı məhdudlaşdırmaqla termal qızmanı məhdudlaşdırın.</string>
     <string name="preference_force_vsync_title">VSync-i məcburi aktivləşdirin</string>
     <string name="preference_force_vsync_description">Pik performansı məhdudlaşdırmaqla termal qızmanı məhdudlaşdırın.</string>
-    <string name="preference_force_english_title">Dili İngilis dilinə məcbur edin</string>
-    <string name="preference_force_english_description">Tərtibatçılar tərəfindən nəzərdə tutulduğu kimi orijinal sətirləri görməyə imkan verir. Yenidən başlamağı tələb edir.</string>
     <string name="preference_edit_controls_title">Fərdi idarəetmələri redaktə edin</string>
     <string name="preference_edit_controls_summary">İdarəetmə sxemini ehtiyaclarınıza uyğunlaşdırın.</string>
     <string name="preference_category_gyro_controls">Giroskop kontrolları</string>

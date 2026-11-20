@@ -186,8 +186,6 @@
     <string name="preference_sustained_performance_description">Zmniejsz nagrzewanie urządzenia, ograniczając górny próg wydajności.</string>
     <string name="preference_force_vsync_title">Wymuś włączenie VSync</string>
     <string name="preference_force_vsync_description">Zmniejsz nagrzewanie urządzenia, ograniczając górny próg wydajności.</string>
-    <string name="preference_force_english_title">Wymuś język angielski</string>
-    <string name="preference_force_english_description">Umożliwia wyświetlenie oryginalnych ciągów znaków, zgodnie z zamierzeniami twórców. Wymaga ponownego uruchomienia.</string>
     <string name="preference_edit_controls_title">Edycja sterowania</string>
     <string name="preference_edit_controls_summary">Dostosuj schemat sterowania do swoich potrzeb.</string>
     <string name="preference_category_gyro_controls">Sterowanie żyroskopowe</string>

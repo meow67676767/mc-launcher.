@@ -163,7 +163,6 @@
     <string name="preference_misc_title">その他の設定</string>
     <string name="preference_sustained_performance_title">持続的なパフォーマンスモードを有効にする</string>
     <string name="preference_force_vsync_title">強制的に垂直同期をオンにする</string>
-    <string name="preference_force_english_title">強制的に言語を英語にする</string>
     <string name="preference_edit_controls_title">コントロールを編集</string>
     <string name="preference_category_gyro_controls">ジャイロコントロール</string>
     <string name="preference_category_virtual_mouse">仮想マウス</string>

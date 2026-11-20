@@ -186,8 +186,6 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="preference_sustained_performance_description">Korlátozza a felmelegedést a csúcsteljesítmény korlátozásával.</string>
     <string name="preference_force_vsync_title">VSync kényszerítése</string>
     <string name="preference_force_vsync_description">Korlátozza a felmelegedést a csúcsteljesítmény korlátozásával.</string>
-    <string name="preference_force_english_title">Angol nyelv kényszerítése</string>
-    <string name="preference_force_english_description">Engedélyezi, hogy lásd az eredeti string-eket, ahogyan a fejlesztők tervezték így. Újraindítást igényel.</string>
     <string name="preference_edit_controls_title">Egyedi kezelőszervek szerkesztése</string>
     <string name="preference_edit_controls_summary">Állítsd át a kezelőszerv sémát az ízlésed szerint.</string>
     <string name="preference_category_gyro_controls">Giroszkópos irányítás</string>

@@ -162,8 +162,6 @@
     <string name="preference_sustained_performance_description">Evitar o aumento de temperatura, limitando o pico de desempenho.</string>
     <string name="preference_force_vsync_title">Forçar V-Sync</string>
     <string name="preference_force_vsync_description">Evitar o aumento de temperatura, limitando o pico de desempenho.</string>
-    <string name="preference_force_english_title">Forçar idioma para o inglês</string>
-    <string name="preference_force_english_description">Permite que você veja frases originais, como esperado por desenvolvedores. Requer uma reinicialização.</string>
     <string name="preference_edit_controls_title">Editar controles personalizados</string>
     <string name="preference_edit_controls_summary">Ajuste o esquema de controle para atender às suas necessidades.</string>
     <string name="preference_category_gyro_controls">Controles giroscópicos</string>

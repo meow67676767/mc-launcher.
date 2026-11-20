@@ -184,8 +184,6 @@
     <string name="preference_sustained_performance_description">Üst performansı kısıtlayarak ısınmayı limitle.</string>
     <string name="preference_force_vsync_title">VSync\'i zorla</string>
     <string name="preference_force_vsync_description">Üst performansı kısıtlayarak ısınmayı limitle.</string>
-    <string name="preference_force_english_title">Dili ingilizce\'ye zorla</string>
-    <string name="preference_force_english_description">Geliştiriciler tarafından amaçlanan orijinal yazıları görmenizi sağlar. Yeniden başlatma gerektirir.</string>
     <string name="preference_edit_controls_title">Özel kontrolleri düzenle</string>
     <string name="preference_edit_controls_summary">İhtiyaçlarınıza göre kontrol şemasını ayarlayın.</string>
     <string name="preference_category_gyro_controls">Jiroskop kontrolleri</string>

@@ -184,8 +184,6 @@
     <string name="preference_sustained_performance_description">Hadkan pendikitan haba dengan mengehadkan prestasi puncak.</string>
     <string name="preference_force_vsync_title">Dayakan VSync secara paksa</string>
     <string name="preference_force_vsync_description">Hadkan pendikitan haba dengan mengehadkan prestasi puncak.</string>
-    <string name="preference_force_english_title">Paksa bahasa kepada bahasa Inggeris</string>
-    <string name="preference_force_english_description">Membolehkan anda melihat string asal, seperti yang dimaksudkan oleh pembangun. Aplikasi perlu dimulakan semula.</string>
     <string name="preference_edit_controls_title">Sunting kawalan tersuai</string>
     <string name="preference_edit_controls_summary">Ubah skema kawalan agar sesuai dengan keperluan anda.</string>
     <string name="preference_category_gyro_controls">Kawalan giroskop</string>

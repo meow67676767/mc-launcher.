@@ -184,8 +184,6 @@
     <string name="preference_sustained_performance_description">Batasi thermal throttling dengan cara membatasi performa maksimal.</string>
     <string name="preference_force_vsync_title">Paksa aktifkan VSync</string>
     <string name="preference_force_vsync_description">Batasi thermal throttling dengan cara membatasi performa maksimal.</string>
-    <string name="preference_force_english_title">Tetapkan bahasa peluncur ke bahasa Inggris</string>
-    <string name="preference_force_english_description">Memperbolehkan anda untuk melihat string asli, seperti kehendak pengembang. perlu restart aplikasi.</string>
     <string name="preference_edit_controls_title">Ubah kontrol kustom</string>
     <string name="preference_edit_controls_summary">Atur skema kontrol untuk menyesuaikan kebutuhan Anda.</string>
     <string name="preference_category_gyro_controls">Kontrol Giro</string>

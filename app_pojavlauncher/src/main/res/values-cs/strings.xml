@@ -184,8 +184,6 @@
     <string name="preference_sustained_performance_description">Limitováním maximálního výkonu snižuje zpomalování z přehřívání.</string>
     <string name="preference_force_vsync_title">Vynutit zapnutí VSync</string>
     <string name="preference_force_vsync_description">Limitováním maximálního výkonu snižuje zpomalování z přehřívání.</string>
-    <string name="preference_force_english_title">Vynutit angličtinu</string>
-    <string name="preference_force_english_description">Umožňuje mít původní text, tak jak byl zamýšlen vývojáři. Vyžaduje restart.</string>
     <string name="preference_edit_controls_title">Upravit vlastní ovládací prvky</string>
     <string name="preference_edit_controls_summary">Vylaďte ovládání dle vašich potřeb.</string>
     <string name="preference_category_gyro_controls">Ovládání gyroskopem</string>

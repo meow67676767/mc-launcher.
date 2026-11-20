@@ -216,8 +216,10 @@
     <string name="preference_sustained_performance_description">Limit thermal throttling by limiting peak performance.</string>
     <string name="preference_force_vsync_title">Force enable VSync</string>
     <string name="preference_force_vsync_description">Limit thermal throttling by limiting peak performance.</string>
-    <string name="preference_force_english_title">Force language to English</string>
-    <string name="preference_force_english_description">Allows you to see original strings, as intended by developers. Requires a restart.</string>
+    <string name="preference_language_title" translatable="false">Language / Язык</string>
+    <string name="language_dialog_title" translatable="false">Choose language / Выберите язык</string>
+    <string name="language_english" translatable="false">English</string>
+    <string name="language_russian" translatable="false">Русский</string>
     <string name="preference_edit_controls_title">Edit custom controls</string>
     <string name="preference_edit_controls_summary">Tweak the control scheme to fit your needs.</string>
 
@@ -486,9 +488,12 @@
     <string name="mg_renderer_summary_dsaExt">May help with Iris shaderpacks, required for AcceleratedRendering mod</string>
     <string name="mg_renderer_title_fsr">AMD FSR 1 Upscaling</string>
     <string name="autorendererselectfailed">Auto-renderer select failed, defaulting to HolyGL4ES</string>
-    <string name="sodium_warning_title">Sodium detected!</string>
-    <string name="sodium_warning_message">It appears you are using sodium, this is unsupported and may lead to graphical issues or crashes. Please remove it and all dependent mods.</string>
-    <string name="delete_sodium">Delete Sodium and Launch</string>
+    <string name="sodium_warning_title">Graphics mods detected</string>
+    <string name="sodium_warning_message">Your profile contains Sodium, Embeddium or similar graphics mods. On phones they often cause visual bugs or crashes.\n\nYou can delete them and launch the game. They will only be removed from this profile; your worlds and other mods stay untouched.</string>
+    <string name="delete_sodium">Delete and launch</string>
+    <string name="sodium_launch_anyway">Launch anyway</string>
+    <string name="sodium_cancel">Cancel</string>
+    <string name="sodium_delete_failed">Could not delete the mods: %1$s</string>
     <string name="sodium_override_title">Run sodium forcefully</string>
     <string name="sodium_override_summaryOff">Using sodium may cause visual bugs and crashes. You have been warned.</string>
     <string name="sodium_override_summaryOn">Sodium is not supported. No help will be given if you encounter any issues.</string>

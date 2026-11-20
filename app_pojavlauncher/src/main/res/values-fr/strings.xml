@@ -179,8 +179,6 @@
     <string name="preference_sustained_performance_description">Limiter la baisse de performance thermique (chauffe) en limitant les performances maximales.</string>
     <string name="preference_force_vsync_title">Forcer l\'activation de la synchronisation verticale</string>
     <string name="preference_force_vsync_description">Limiter la baisse de performance thermique (chauffe) en limitant les performances maximales.</string>
-    <string name="preference_force_english_title">Forcer la langue en anglais</string>
-    <string name="preference_force_english_description">Permet de voir les chaînes de caractères originales, telles qu\'elles ont été conçues par les développeurs. Nécessite un redémarrage.</string>
     <string name="preference_edit_controls_title">Modifier les contrôles personnalisés</string>
     <string name="preference_edit_controls_summary">Ajuster le schéma de contrôles pour répondre à vos besoins.</string>
     <string name="preference_category_gyro_controls">Contrôles gyroscopiques</string>

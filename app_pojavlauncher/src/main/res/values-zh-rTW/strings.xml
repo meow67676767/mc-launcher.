@@ -184,8 +184,6 @@
     <string name="preference_sustained_performance_description">透過限制峰值效能來限制過熱降頻。</string>
     <string name="preference_force_vsync_title">強制啟用垂直同步</string>
     <string name="preference_force_vsync_description">透過限制峰值效能來限制過熱降頻。</string>
-    <string name="preference_force_english_title">強制使用英文</string>
-    <string name="preference_force_english_description">允許您按開發者的原意看到原始字符串，此操作需要重啟。</string>
     <string name="preference_edit_controls_title">編輯控制鍵佈局</string>
     <string name="preference_edit_controls_summary">調整控制鍵佈局方案以適應您的需求。</string>
     <string name="preference_category_gyro_controls">陀螺儀控制</string>

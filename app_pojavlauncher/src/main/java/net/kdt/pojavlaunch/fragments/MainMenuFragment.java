@@ -91,10 +91,17 @@ public class MainMenuFragment extends Fragment {
                 AlertDialog sodiumWarningDialog = new AlertDialog.Builder(requireContext())
                         .setTitle(R.string.sodium_warning_title)
                         .setMessage(R.string.sodium_warning_message)
-                        .setNeutralButton(R.string.delete_sodium, (d,w)-> {
-                            Tools.deleteSodiumMods();
+                        .setPositiveButton(R.string.delete_sodium, (d,w)-> {
+                            try {
+                                Tools.deleteSodiumMods();
+                            } catch (Exception e) {
+                                Toast.makeText(requireContext(), getString(R.string.sodium_delete_failed, e.getMessage()), Toast.LENGTH_LONG).show();
+                                return;
+                            }
                             ExtraCore.setValue(ExtraConstants.LAUNCH_GAME, true);
                         })
+                        .setNegativeButton(R.string.sodium_launch_anyway, (d,w)-> ExtraCore.setValue(ExtraConstants.LAUNCH_GAME, true))
+                        .setNeutralButton(R.string.sodium_cancel, null)
                         .create();
                 sodiumWarningDialog.show();
             } else ExtraCore.setValue(ExtraConstants.LAUNCH_GAME, true);

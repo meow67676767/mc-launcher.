@@ -160,8 +160,6 @@
     <string name="preference_sustained_performance_description">จำกัดการควบคุมปริมาณความร้อนโดยการจำกัดประสิทธิภาพสูงสุด</string>
     <string name="preference_force_vsync_title">บังคับให้เปิดใช้งาน VSync</string>
     <string name="preference_force_vsync_description">จำกัดการควบคุมปริมาณความร้อนโดยการจำกัดประสิทธิภาพสูงสุด</string>
-    <string name="preference_force_english_title">บังคับภาษาเป็น English</string>
-    <string name="preference_force_english_description">ช่วยให้คุณเห็นสตริงต้นฉบับตามที่นักพัฒนาต้องการ จำเป็นต้องรีสตาร์ท</string>
     <string name="preference_edit_controls_title">เเก้ไขการควบคุมกำหนดเอง</string>
     <string name="preference_edit_controls_summary">ปรับแต่งรูปแบบการควบคุมให้เหมาะกับความต้องการของคุณ</string>
     <string name="preference_category_gyro_controls">การควบคุมไจโรสโคป</string>

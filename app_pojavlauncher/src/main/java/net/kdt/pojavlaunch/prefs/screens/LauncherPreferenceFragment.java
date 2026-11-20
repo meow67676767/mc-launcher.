@@ -2,6 +2,7 @@ package net.kdt.pojavlaunch.prefs.screens;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ import androidx.preference.PreferenceFragmentCompat;
 import net.kdt.pojavlaunch.LauncherActivity;
 import net.kdt.pojavlaunch.R;
 import net.kdt.pojavlaunch.prefs.LauncherPreferences;
+import net.kdt.pojavlaunch.utils.LocaleUtils;
 
 /**
  * Preference for the main screen, any sub-screen should inherit this class for consistent behavior,
@@ -71,6 +73,13 @@ public class LauncherPreferenceFragment extends PreferenceFragmentCompat impleme
     @Override
     public void onSharedPreferenceChanged(SharedPreferences p, String s) {
         LauncherPreferences.loadPreferences(getContext());
+        if(LocaleUtils.PREF_KEY_APP_LANGUAGE.equals(s)) {
+            // Apply the new language to the application resources and restart the screen
+            Context context = getContext();
+            if(context != null) LocaleUtils.setLocale(context.getApplicationContext());
+            Activity activity = getActivity();
+            if(activity != null) activity.recreate();
+        }
     }
 
     protected Preference requirePreference(CharSequence key) {

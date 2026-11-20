@@ -181,8 +181,6 @@
     <string name="preference_sustained_performance_description">Уменьшает перегрев устройства за счёт ограничения максимальной производительности.</string>
     <string name="preference_force_vsync_title">Принудительная вертикальная синхронизация</string>
     <string name="preference_force_vsync_description">Уменьшает перегрев устройства за счёт ограничения максимальной производительности.</string>
-    <string name="preference_force_english_title">Принудительно включить английский</string>
-    <string name="preference_force_english_description">Позволяет увидеть оригинальные строки такими, какими их задумали разработчики. Требуется перезапуск.</string>
     <string name="preference_edit_controls_title">Изменить раскладку</string>
     <string name="preference_edit_controls_summary">Настройте кнопки управления по вашему желанию.</string>
     <string name="preference_category_gyro_controls">Гироскоп</string>
@@ -462,4 +460,13 @@
     <string name="modpack_import">Импорт ZIP или mrpack</string>
 
     <string name="update_banner_text">Доступно обновление %1$s</string>
+    <string name="sodium_warning_title">Найдены графические моды</string>
+    <string name="sodium_warning_message">В вашем профиле есть Sodium, Embeddium или похожие графические моды. На телефонах они часто вызывают визуальные баги или вылеты.\n\nМожно удалить их и запустить игру. Моды будут удалены только из этого профиля, миры и остальные моды не пострадают.</string>
+    <string name="delete_sodium">Удалить и запустить</string>
+    <string name="sodium_launch_anyway">Всё равно запустить</string>
+    <string name="sodium_cancel">Отмена</string>
+    <string name="sodium_delete_failed">Не удалось удалить моды: %1$s</string>
+    <string name="sodium_override_title">Принудительно запускать Sodium</string>
+    <string name="sodium_override_summaryOff">Использование Sodium может вызвать визуальные баги и вылеты. Вы предупреждены.</string>
+    <string name="sodium_override_summaryOn">Sodium не поддерживается. Если возникнут проблемы, помощи не будет.</string>
 </resources>

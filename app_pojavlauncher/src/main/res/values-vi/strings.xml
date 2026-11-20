@@ -184,8 +184,6 @@
     <string name="preference_sustained_performance_description">Ngăn tình trạng giảm hiệu suất vì quá nhiệt bằng cách giới hạn hiệu suất tối đa.</string>
     <string name="preference_force_vsync_title">Buộc sử dụng VSync</string>
     <string name="preference_force_vsync_description">Ngăn tình trạng giảm hiệu suất vì quá nhiệt bằng cách giới hạn hiệu suất tối đa.</string>
-    <string name="preference_force_english_title">Buộc sử dụng tiếng Anh</string>
-    <string name="preference_force_english_description">Cho phép bạn xem các văn bản gốc do chính nhà phát triển viết. Yêu cầu khởi động lại.</string>
     <string name="preference_edit_controls_title">Tùy chỉnh điều khiển</string>
     <string name="preference_edit_controls_summary">Tinh chỉnh các nút điều khiển phù hợp với bạn.</string>
     <string name="preference_category_gyro_controls">Điều khiển con quay hồi chuyển</string>

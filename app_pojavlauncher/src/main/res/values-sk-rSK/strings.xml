@@ -152,8 +152,6 @@
     <string name="preference_sustained_performance_description">Umožňuje pokles teploty zariadenia limitovaním výkonu.</string>
     <string name="preference_force_vsync_title">Vynútiť VSync</string>
     <string name="preference_force_vsync_description">Umožňuje pokles teploty zariadenia limitovaním výkonu.</string>
-    <string name="preference_force_english_title">Vynútiť angličtinu</string>
-    <string name="preference_force_english_description">Umožňuje vidieť pôvodné názvy tlačidiel navrhnuté vývojármi. Na nastavenie je nutný reštart aplikácie.</string>
     <string name="preference_edit_controls_title">Vlastné ovládacie prvky</string>
     <string name="preference_edit_controls_summary">Prispôsobte si kontrolky podľa svojich predstáv.</string>
     <string name="preference_category_gyro_controls">Ovládanie gyroskopom</string>

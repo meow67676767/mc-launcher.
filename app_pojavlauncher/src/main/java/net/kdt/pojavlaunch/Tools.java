@@ -316,7 +316,7 @@ public final class Tools {
     public static void deleteSodiumMods() {
         File modsDir = new File(getGameDir(), "mods");
         File[] mods = modsDir.listFiles(file -> file.isFile() && file.getName().endsWith(".jar"));
-        if(mods == null) ;
+        if(mods == null) return;
         for(File file : mods) {
             String name = file.getName().toLowerCase();
             if(name.contains("sodium") ||

@@ -178,8 +178,6 @@
     <string name="preference_sustained_performance_description">הגבלת התחממות יתר על ידי הגבלת הביצועים המרביים</string>
     <string name="preference_force_vsync_title">לכפות הפעלת vsync</string>
     <string name="preference_force_vsync_description">הגבלת התחממות יתר על ידי הגבלת הביצועים המרביים</string>
-    <string name="preference_force_english_title">אלץ שפה לאנגלית</string>
-    <string name="preference_force_english_description">מאפשר לך לראות את המחרוזות המקוריות כפי שמתוכנן על ידי המפתחים. דורש הפעלה מחדש.</string>
     <string name="preference_edit_controls_title">עריכת בקרים מותאמות אישית</string>
     <string name="preference_edit_controls_summary">כוונ/י את סכמת השליטה כך שתתאים לצרכיך.</string>
     <string name="preference_category_gyro_controls">בקריי גירוסקופ</string>

@@ -141,8 +141,6 @@
     <string name="preference_misc_title">Kiti nustatymai</string>
     <string name="preference_sustained_performance_title">Įjungti nuolatinio našumo režimą</string>
     <string name="preference_force_vsync_title">Priverstinai įjungti VSync</string>
-    <string name="preference_force_english_title">Perjungti I Anglų kalbą</string>
-    <string name="preference_force_english_description">Leidžia matyti originalų tekstą, kaip numatyta kūrejų. Reikalingas paleidimas iš naujo.</string>
     <string name="preference_edit_controls_title">Redaguoti kontroliavimą</string>
     <string name="preference_category_gyro_controls">Gyroskopo kontrolės</string>
     <string name="preference_gyro_invert_x_axis">Invertuoti X ašį</string>

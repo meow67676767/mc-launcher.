@@ -289,6 +289,26 @@ public class LauncherActivity extends BaseActivity implements net.kdt.pojavlaunc
         return false;
     }
 
+    /** Asks the user to pick the app language on the first start, then recreates the activity */
+    private void showLanguageChoiceDialog() {
+        final String[] languages = {
+                net.kdt.pojavlaunch.utils.LocaleUtils.LANGUAGE_EN,
+                net.kdt.pojavlaunch.utils.LocaleUtils.LANGUAGE_RU
+        };
+        final CharSequence[] names = {
+                getString(R.string.language_english),
+                getString(R.string.language_russian)
+        };
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.language_dialog_title)
+                .setItems(names, (dialog, which) -> {
+                    net.kdt.pojavlaunch.utils.LocaleUtils.saveLanguage(this, languages[which]);
+                    recreate();
+                })
+                .setCancelable(false)
+                .show();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -305,6 +325,10 @@ public class LauncherActivity extends BaseActivity implements net.kdt.pojavlaunc
                     .add(R.id.container_fragment, MainMenuFragment.class, null, "ROOT").commit();
         }
 
+
+        if(!net.kdt.pojavlaunch.utils.LocaleUtils.isLanguageChosen(this)) {
+            showLanguageChoiceDialog();
+        }
 
         IconCacheJanitor.runJanitor();
         net.kdt.pojavlaunch.utils.UpdateChecker.check(this, false);

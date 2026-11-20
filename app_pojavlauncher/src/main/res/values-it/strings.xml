@@ -183,8 +183,6 @@
     <string name="preference_sustained_performance_description">Limita il thermal throttling limitando le performance massime.</string>
     <string name="preference_force_vsync_title">Forza sincronia verticale</string>
     <string name="preference_force_vsync_description">Limita il thermal throttling limitando le performance massime.</string>
-    <string name="preference_force_english_title">Forza lingua inglese</string>
-    <string name="preference_force_english_description">Ti consente di vedere le stringhe originali, come previsto dagli sviluppatori. Richiede un riavvio dell\'app.</string>
     <string name="preference_edit_controls_title">Modifica i controlli personalizzati</string>
     <string name="preference_edit_controls_summary">Regola lo schema di controllo per soddisfare le tue esigenze.</string>
     <string name="preference_category_gyro_controls">Controlli giroscopio</string>
