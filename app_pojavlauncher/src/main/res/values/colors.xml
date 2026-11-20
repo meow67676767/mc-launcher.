@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="control_button_color">#4CC4C4C4</color>
+    <color name="control_button_pressed_color">#4D000000</color>
+
+    <color name="minebutton_color">#9649b8</color>
+    <color name="background_app">#181818</color>
+    <color name="divider">@color/background_overlay</color>
+    <color name="background_overlay">#464646</color>
+    <color name="background_status_bar">#242424</color>
+    <color name="background_bottom_bar">#232323</color>
+
+    <color name="primary_text">#FFFFFF</color>
+    <color name="secondary_text">#B2B2B2</color>
+
+    <!-- Glass and gradient palette -->
+    <color name="glass_bg_base">#0F0A1E</color>
+    <color name="glass_bg_violet">#8C7C4DFF</color>
+    <color name="glass_bg_violet_clear">#007C4DFF</color>
+    <color name="glass_bg_indigo">#B34C3482</color>
+    <color name="glass_bg_indigo_clear">#004C3482</color>
+    <color name="glass_bg_orange">#59F4A652</color>
+    <color name="glass_bg_orange_clear">#00F4A652</color>
+
+    <color name="glass_text">#F5F0FF</color>
+    <color name="glass_text_muted">#A6F5F0FF</color>
+    <color name="glass_ink">#1B1233</color>
+    <color name="glass_fill">#12FFFFFF</color>
+    <color name="glass_fill_strong">#1AFFFFFF</color>
+    <color name="glass_fill_faint">#0FFFFFFF</color>
+    <color name="glass_stroke">#24FFFFFF</color>
+    <color name="glass_stroke_strong">#2EFFFFFF</color>
+    <color name="glass_ripple">#33FFFFFF</color>
+    <color name="glass_popup">#FF1F1638</color>
+    <color name="glass_hero_start">#73714DFF</color>
+    <color name="glass_hero_middle">#404C3482</color>
+    <color name="glass_hero_end">#40F4A652</color>
+    <color name="glass_banner_start">#47FFB86B</color>
+
+    <color name="cta_start">#FFB86B</color>
+    <color name="cta_end">#F47B52</color>
+    <color name="cta_text">#2A1206</color>
+    <color name="cta_glow">#73F47B52</color>
+    <color name="success">#7ADB6C</color>
+    <color name="error">#FF8A80</color>
+
+    <!-- Accents of the main tiles and of the loaders -->
+    <color name="accent_mods">#8A6CFF</color>
+    <color name="accent_profiles">#4FB3A6</color>
+    <color name="accent_controls">#F47B52</color>
+    <color name="accent_tools">#C58BFF</color>
+    <color name="loader_vanilla">#9E9E9E</color>
+    <color name="loader_fabric">#DBD0B4</color>
+    <color name="loader_quilt">#C58BFF</color>
+    <color name="loader_forge">#E0773A</color>
+    <color name="loader_neoforge">#F19A46</color>
+    <color name="loader_optifine">#E04545</color>
+    <color name="loader_other">#5FA04E</color>
+</resources>

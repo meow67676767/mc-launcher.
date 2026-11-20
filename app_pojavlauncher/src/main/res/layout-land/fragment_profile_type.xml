@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kdt.DefocusableScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/glass_screen_margin"
+        android:paddingEnd="@dimen/glass_screen_margin"
+        android:paddingBottom="@dimen/glass_screen_margin">
+
+    <TextView
+        android:id="@+id/title_textview"
+        style="@style/Glass.Heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:text="@string/create_profile_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include
+                layout="@layout/fragment_profile_type_grid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.4" />
+
+            <Space
+                android:layout_width="@dimen/glass_gap"
+                android:layout_height="0dp" />
+
+            <include
+                layout="@layout/fragment_profile_type_more"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+</com.kdt.DefocusableScrollView>

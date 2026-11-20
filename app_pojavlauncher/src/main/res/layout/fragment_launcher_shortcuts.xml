@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shortcut tiles and secondary actions of the main screen, included by both orientations -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_shortcuts"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/glass_gap"
+        android:orientation="horizontal">
+
+        <com.kdt.mcgui.GlassTile
+            android:id="@+id/tile_mods"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/glass_tile_height"
+            android:layout_weight="1"
+            app:tileAccent="@color/accent_mods"
+            app:tileIcon="@drawable/ic_gl_mods"
+            app:tileSubtitle="@string/tile_mods_hint"
+            app:tileTitle="@string/tile_mods" />
+
+        <Space
+            android:layout_width="@dimen/glass_gap"
+            android:layout_height="0dp" />
+
+        <com.kdt.mcgui.GlassTile
+            android:id="@+id/tile_profiles"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/glass_tile_height"
+            android:layout_weight="1"
+            app:tileAccent="@color/accent_profiles"
+            app:tileIcon="@drawable/ic_gl_profiles"
+            app:tileSubtitle="@string/tile_profiles_hint"
+            app:tileTitle="@string/tile_profiles" />
+
+        <Space
+            android:layout_width="@dimen/glass_gap"
+            android:layout_height="0dp" />
+
+        <com.kdt.mcgui.GlassTile
+            android:id="@+id/custom_control_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/glass_tile_height"
+            android:layout_weight="1"
+            app:tileAccent="@color/accent_controls"
+            app:tileIcon="@drawable/ic_gl_controls"
+            app:tileSubtitle="@string/tile_controls_hint"
+            app:tileTitle="@string/tile_controls" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/settings_row"
+            style="@style/Glass.Row"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_gl_settings"
+            android:text="@string/row_settings" />
+
+        <Space
+            android:layout_width="@dimen/glass_gap"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/share_logs_button"
+            style="@style/Glass.Row"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_gl_logs"
+            android:text="@string/row_logs" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/glass_gap"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/discord_button"
+            style="@style/Glass.Row"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_gl_update"
+            android:text="@string/menu_updates" />
+
+        <Space
+            android:layout_width="@dimen/glass_gap"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/install_jar_button"
+            style="@style/Glass.Row"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_gl_jar"
+            android:text="@string/main_install_jar_file" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/glass_gap"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/open_files_button"
+            style="@style/Glass.Row"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_gl_folder"
+            android:text="@string/row_game_folder" />
+
+        <Space
+            android:layout_width="@dimen/glass_gap"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/news_button"
+            style="@style/Glass.Row"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_gl_link"
+            android:text="@string/menu_github" />
+
+    </LinearLayout>
+
+</LinearLayout>

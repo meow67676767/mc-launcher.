@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="seekBarIncrement" format="integer" />
+    <declare-styleable name="CustomSeekbar">
+        <attr name="seekBarIncrement" />
+        <!-- Redefine to be able to fetch the value -->
+        <attr name="android:min" />
+    </declare-styleable>
+    <declare-styleable name="MineButton">
+        <!-- Orange gradient call-to-action look instead of the glass one -->
+        <attr name="cta" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="GlassTile">
+        <attr name="tileTitle" format="string" />
+        <attr name="tileSubtitle" format="string" />
+        <attr name="tileIcon" format="reference" />
+        <!-- Short text shown in a colored badge instead of the icon -->
+        <attr name="tileBadge" format="string" />
+        <attr name="tileAccent" format="color" />
+        <!-- Highlighted look: accent border and a check mark -->
+        <attr name="tileHighlighted" format="boolean" />
+    </declare-styleable>
+</resources>

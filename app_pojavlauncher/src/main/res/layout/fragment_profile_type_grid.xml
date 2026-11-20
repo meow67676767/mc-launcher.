@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Loader cards of the profile type screen -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.kdt.mcgui.GlassTile
+            android:id="@+id/vanilla_profile"
+            android:layout_width="0dp"
+            android:layout_height="112dp"
+            android:layout_weight="1"
+            app:tileAccent="@color/loader_vanilla"
+            app:tileBadge="V"
+            app:tileSubtitle="@string/loader_vanilla_hint"
+            app:tileTitle="@string/loader_name_vanilla" />
+
+        <Space
+            android:layout_width="@dimen/glass_gap"
+            android:layout_height="0dp" />
+
+        <com.kdt.mcgui.GlassTile
+            android:id="@+id/modded_profile_fabric"
+            android:layout_width="0dp"
+            android:layout_height="112dp"
+            android:layout_weight="1"
+            app:tileAccent="@color/loader_fabric"
+            app:tileBadge="F"
+            app:tileSubtitle="@string/loader_fabric_hint"
+            app:tileTitle="@string/loader_name_fabric" />
+
+        <Space
+            android:layout_width="@dimen/glass_gap"
+            android:layout_height="0dp" />
+
+        <com.kdt.mcgui.GlassTile
+            android:id="@+id/modded_profile_quilt"
+            android:layout_width="0dp"
+            android:layout_height="112dp"
+            android:layout_weight="1"
+            app:tileAccent="@color/loader_quilt"
+            app:tileBadge="Q"
+            app:tileSubtitle="@string/loader_quilt_hint"
+            app:tileTitle="@string/loader_name_quilt" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="@dimen/glass_gap" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.kdt.mcgui.GlassTile
+            android:id="@+id/modded_profile_forge"
+            android:layout_width="0dp"
+            android:layout_height="112dp"
+            android:layout_weight="1"
+            app:tileHighlighted="true"
+            app:tileAccent="@color/loader_forge"
+            app:tileBadge="Fg"
+            app:tileSubtitle="@string/loader_forge_hint"
+            app:tileTitle="@string/loader_name_forge" />
+
+        <Space
+            android:layout_width="@dimen/glass_gap"
+            android:layout_height="0dp" />
+
+        <com.kdt.mcgui.GlassTile
+            android:id="@+id/modded_profile_neoforge"
+            android:layout_width="0dp"
+            android:layout_height="112dp"
+            android:layout_weight="1"
+            app:tileAccent="@color/loader_neoforge"
+            app:tileBadge="N"
+            app:tileSubtitle="@string/loader_neoforge_hint"
+            app:tileTitle="@string/loader_name_neoforge" />
+
+        <Space
+            android:layout_width="@dimen/glass_gap"
+            android:layout_height="0dp" />
+
+        <com.kdt.mcgui.GlassTile
+            android:id="@+id/optifine_profile"
+            android:layout_width="0dp"
+            android:layout_height="112dp"
+            android:layout_weight="1"
+            app:tileAccent="@color/loader_optifine"
+            app:tileBadge="O"
+            app:tileSubtitle="@string/loader_optifine_hint"
+            app:tileTitle="@string/loader_name_optifine" />
+    </LinearLayout>
+
+</LinearLayout>

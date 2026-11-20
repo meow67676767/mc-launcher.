@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/glass_screen_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/glass_panel"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            style="@style/Glass.Heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/modpack_install_button" />
+
+        <com.kdt.mcgui.MineButton
+            android:id="@+id/button_browse_modpacks"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/glass_cta_height"
+            android:drawableStart="@drawable/ic_gl_search"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:paddingHorizontal="24dp"
+            android:text="@string/modpack_browse"
+            android:textSize="16sp"
+            app:cta="true" />
+
+        <com.kdt.mcgui.MineButton
+            android:id="@+id/button_import_modpack"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/glass_row_height"
+            android:layout_marginTop="@dimen/glass_gap"
+            android:drawableStart="@drawable/ic_gl_download"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:paddingHorizontal="24dp"
+            android:text="@string/modpack_import" />
+    </LinearLayout>
+
+</LinearLayout>

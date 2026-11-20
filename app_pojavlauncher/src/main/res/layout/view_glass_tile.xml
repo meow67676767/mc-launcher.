@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/glass_tile_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="top|start"
+        android:layout_margin="14dp"
+        android:importantForAccessibility="no"
+        android:visibility="gone"
+        tools:src="@drawable/ic_gl_mods"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/glass_tile_badge"
+        style="@style/Glass.Heading"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="top|start"
+        android:layout_margin="12dp"
+        android:gravity="center"
+        android:importantForAccessibility="no"
+        android:textColor="@color/glass_ink"
+        android:textSize="14sp"
+        android:visibility="gone"
+        tools:text="Fg" />
+
+    <ImageView
+        android:id="@+id/glass_tile_check"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="10dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_gl_check_circle"
+        android:tint="@color/cta_start"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:paddingStart="14dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:id="@+id/glass_tile_title"
+            style="@style/Glass.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="Моды" />
+
+        <TextView
+            android:id="@+id/glass_tile_subtitle"
+            style="@style/Glass.Muted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            tools:text="Каталог и сборки" />
+    </LinearLayout>
+</merge>
